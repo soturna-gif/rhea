@@ -29,8 +29,10 @@
 <body>
   <div class="contador" id="contador"></div>
   <img src="imagem3.png" alt="Imagem Central" class="imagem">
-  <iframe src="https://www.youtube.com/embed/PELeEo33JXs?autoplay=1&loop=1&playlist=PELeEo33JXs" allow="autoplay"></iframe>
-
+  <audio autoplay loop>
+  <source src="sunlight-hozier.mp3" type="audio/mpeg">
+  Seu navegador não suporta o elemento de áudio.
+</audio>
   <script>
     const inicio = new Date("2025-03-25T00:00:00");
     function atualizarContador() {
@@ -41,8 +43,7 @@
       const minutos = Math.floor((diff / (1000 * 60)) % 60);
       const segundos = Math.floor((diff / 1000) % 60);
       document.getElementById("contador").textContent =
-        `Estamos juntos há ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.`;
-    }
+        `Estamos juntos há ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos e ${milisegundos} milésimos.`;
     setInterval(atualizarContador, 1000);
     atualizarContador();
   </script>
